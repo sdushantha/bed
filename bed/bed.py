@@ -125,7 +125,7 @@ def get_browser(extension_url):
             return browser
 
 
-def main():
+def run():
     parser = argparse.ArgumentParser(description="A very simple command line Browser Extension Downloader")
     parser.add_argument('url', action="store")
     args = parser.parse_args()
@@ -191,4 +191,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    run()
