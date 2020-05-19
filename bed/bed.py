@@ -105,14 +105,14 @@ def get_browser(extension_url):
     """
 
     browser_dict = {
-        "firefox":{
-            "regex":r"https:\/\/addons\.mozilla\.org\/[a-zA-Z-]+\/firefox\/addon\/.*"
+        "firefox": {
+            "regex": r"https:\/\/addons\.mozilla\.org\/[a-zA-Z-]+\/firefox\/addon\/.*"
             },
-        "chrome":{
-            "regex":r"https:\/\/chrome\.google\.com\/webstore\/detail\/[a-zA-Z0-9-_]+\/.*"
+        "chrome": {
+            "regex": r"https:\/\/chrome\.google\.com\/webstore\/detail\/[a-zA-Z0-9-_]+\/.*"
             },
-        "opera":{
-            "regex":r"https:\/\/addons\.opera\.com\/.*\/extensions\/details\/.*"
+        "opera": {
+            "regex": r"https:\/\/addons\.opera\.com\/.*\/extensions\/details\/.*"
             }
         }
 
@@ -132,13 +132,12 @@ def main():
 
     url = args.url
 
-
     Cursor.hide()
 
     if get_browser(url) == "chrome":
         print(f"{GOOD} Valid Chrome Web Store url")
 
-        print(f"Getting webpage source code...", end="\r", flush=True)
+        print("Getting webpage source code...", end="\r", flush=True)
         extension_data = get_chrome_extension(url)
         print(ERASE_LINE, end="\r", flush=True)
         print(f"{GOOD} Fetched webpage code code")
@@ -149,7 +148,7 @@ def main():
     elif get_browser(url) == "firefox":
         print(f"{GOOD} Valid Firefox addon url")
 
-        print(f"Getting webpage source code...", end="\r", flush=True)
+        print("Getting webpage source code...", end="\r", flush=True)
         extension_data = get_firefox_extension(url)
         print(ERASE_LINE, end="\r", flush=True)
         print(f"{GOOD} Fetched webpage code code")
@@ -160,7 +159,7 @@ def main():
     elif get_browser(url) == "opera":
         print(f"{GOOD} Valid Opera addon url")
 
-        print(f"Getting webpage source code...", end="\r", flush=True)
+        print("Getting webpage source code...", end="\r", flush=True)
         extension_data = get_opera_extension(url)
         print(ERASE_LINE, end="\r", flush=True)
         print(f"{GOOD} Fetched webpage code code")
@@ -189,6 +188,7 @@ def main():
     print(f"{GOOD} Download complete: {file_name}")
 
     Cursor.show()
+
 
 if __name__ == "__main__":
     main()
