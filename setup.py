@@ -12,8 +12,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/sdushantha/bed',
-    py_modules=['bed'],
-    scripts=['bed/bed'],
-    install_requires=['requests', 'colorama', 'bs4']
+    entry_points={'console_scripts': ['bed=bed:main']},
+    install_requires=['requests', 'colorama', 'bs4', 'lxml']
 )
 
