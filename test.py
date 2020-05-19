@@ -1,6 +1,5 @@
 import unittest
-import bed
-
+from bed import bed
 
 class GetExtensionTests(unittest.TestCase):
     def test_get_browser(self):

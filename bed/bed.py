@@ -126,7 +126,7 @@ def get_browser(extension_url):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="A Firefox and Chrome addon/extension downloader")
+    parser = argparse.ArgumentParser(description="A very simple command line Browser Extension Downloader")
     parser.add_argument('url', action="store")
     args = parser.parse_args()
 
