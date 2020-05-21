@@ -1,5 +1,5 @@
 import unittest
-from bed import bed
+from bed import utils
 
 class GetExtensionTests(unittest.TestCase):
     def test_get_browser(self):
@@ -7,13 +7,13 @@ class GetExtensionTests(unittest.TestCase):
         firefox = "https://addons.mozilla.org/en-US/firefox/addon/2048-webextension/"
         chrome = "https://chrome.google.com/webstore/detail/aha-music-music-identifie/dpacanjfikmhoddligfbehkpomnbgblf"
 
-        self.assertEqual(bed.get_browser(opera), "opera")
-        self.assertEqual(bed.get_browser(firefox), "firefox")
-        self.assertEqual(bed.get_browser(chrome), "chrome")
+        self.assertEqual(utils.get_browser(opera), "opera")
+        self.assertEqual(utils.get_browser(firefox), "firefox")
+        self.assertEqual(utils.get_browser(chrome), "chrome")
 
 
     def test_get_chrome_extension(self):
-        data = bed.get_chrome_extension("https://chrome.google.com/webstore/detail/aha-music-music-identifie/dpacanjfikmhoddligfbehkpomnbgblf")
+        data = utils.get_chrome_extension("https://chrome.google.com/webstore/detail/aha-music-music-identifie/dpacanjfikmhoddligfbehkpomnbgblf")
 
         file_url = data[0]
         extension_name = data[1]
@@ -25,7 +25,7 @@ class GetExtensionTests(unittest.TestCase):
 
 
     def test_get_firefox_extension(self):
-        data = bed.get_firefox_extension("https://addons.mozilla.org/en-US/firefox/addon/2048-webextension/")
+        data = utils.get_firefox_extension("https://addons.mozilla.org/en-US/firefox/addon/2048-webextension/")
 
         file_url = data[0]
         extension_name = data[1]
@@ -37,7 +37,7 @@ class GetExtensionTests(unittest.TestCase):
 
 
     def test_get_opera_extension(self):
-        data = bed.get_opera_extension("https://addons.opera.com/en/extensions/details/ublock/")
+        data = utils.get_opera_extension("https://addons.opera.com/en/extensions/details/ublock/")
 
         file_url = data[0]
         extension_name = data[1]
