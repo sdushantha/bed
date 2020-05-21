@@ -14,7 +14,7 @@
 $ git clone https://github.com/sdushantha/bed.git
 
 # install the requirements
-$ pip3 install -r requirements.txt
+$ pip3 install --user -r requirements.txt
 ```
 
 #### Using pip
