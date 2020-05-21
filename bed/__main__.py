@@ -7,7 +7,7 @@ import sys
 import argparse
 import requests
 from colorama import Fore, Style
-import bed
+from . import utils
 
 # This magic spell lets me erase the current line.
 # I can use this to show for example "Downloading..."
@@ -36,33 +36,33 @@ def main():
 
     Cursor.hide()
 
-    if bed.get_browser(url) == "chrome":
+    if utils.get_browser(url) == "chrome":
         print(f"{GOOD} Valid Chrome Web Store url")
 
         print("Getting webpage source code...", end="\r", flush=True)
-        extension_data = bed.get_chrome_extension(url)
+        extension_data = utils.get_chrome_extension(url)
         print(ERASE_LINE, end="\r", flush=True)
         print(f"{GOOD} Fetched webpage code code")
 
         file_extension = "crx"
         browser = "chrome"
 
-    elif bed.get_browser(url) == "firefox":
+    elif utils.get_browser(url) == "firefox":
         print(f"{GOOD} Valid Firefox addon url")
 
         print("Getting webpage source code...", end="\r", flush=True)
-        extension_data = bed.get_firefox_extension(url)
+        extension_data = utils.get_firefox_extension(url)
         print(ERASE_LINE, end="\r", flush=True)
         print(f"{GOOD} Fetched webpage code code")
 
         file_extension = "xpi"
         browser = "firefox"
 
-    elif bed.get_browser(url) == "opera":
+    elif utils.get_browser(url) == "opera":
         print(f"{GOOD} Valid Opera addon url")
 
         print("Getting webpage source code...", end="\r", flush=True)
-        extension_data = bed.get_opera_extension(url)
+        extension_data = utils.get_opera_extension(url)
         print(ERASE_LINE, end="\r", flush=True)
         print(f"{GOOD} Fetched webpage code code")
 
