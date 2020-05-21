@@ -20,8 +20,9 @@ $ pip3 install -r requirements.txt
 #### Using pip
 _Note: I will upload_ `bed` _to pypi soon_
 ```
-pip3 install git+https://github.com/sdushantha/bed
+pip3 install --user git+https://github.com/sdushantha/bed
 ```
+
 ## Usage
 ### Supported browsers
 - Firefox
