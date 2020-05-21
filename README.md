@@ -41,4 +41,4 @@ optional arguments:
   -h, --help  show this help message and exit
 ```
 
-## 
+[![Support me!](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/XoJfSVI)
