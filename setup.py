@@ -5,7 +5,7 @@ with open('README.md', 'r') as fh:
 
 setuptools.setup(
     name='bed',
-    version='19.05.2020',
+    version='21.05.2020',
     author='Siddharth Dushantha',
     author_email='siddharth.dushantha@gmail.com',
     description='A very simple command line Browser Extension Downloader',
